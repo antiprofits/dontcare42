@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "llm-application-dev": {
+      "source": "moizibnyousaf/ai-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/llm-application-dev/SKILL.md",
+      "computedHash": "40d1e0994e1d9c79693b6970cfe9ea568e736cbbb7e51731cede9db210c2246c"
+    }
+  }
+}
