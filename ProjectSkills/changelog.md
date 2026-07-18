@@ -4,6 +4,15 @@ Chronological record of skill additions, removals, and status changes.
 
 ---
 
+## 2026-07-18
+
+### Added
+- `task-observer` v2.0.0 (rebelytics/one-skill-to-rule-them-all) — meta-skill that monitors
+  sessions and logs skill improvement observations; feeds into ProjectSkills governance layer.
+  Installed manually (curl) with `references/` folder retained (on-demand text files, not assets).
+
+---
+
 ## 2026-06-27
 
 ### Added

@@ -7,6 +7,14 @@ Update this file every time a skill is installed, parked, or removed.
 
 ## Active Skills — In Repo (`.claude/skills/`)
 
+### Meta / Governance
+
+| Skill | Source | Hash prefix | Scope | Added |
+|-------|--------|-------------|-------|-------|
+| `task-observer` | `rebelytics/one-skill-to-rule-them-all` | `60bfdcd9` | global | 2026-07-18 |
+
+> Note: `task-observer` keeps its `references/` folder (3 `.md` files) — these are text files the skill loads on demand, not binary assets.
+
 ### LLM & AI Development
 
 | Skill | Source | Hash prefix | Scope | Added |
@@ -79,8 +87,8 @@ Skills that were active and have been removed.
 
 | Category | Count |
 |----------|-------|
-| Active (in repo) | 26 |
+| Active (in repo) | 27 |
 | Active (user-level) | 1 |
 | Parked | 1 |
 | Deprecated | 0 |
-| **Total tracked** | **28** |
+| **Total tracked** | **29** |

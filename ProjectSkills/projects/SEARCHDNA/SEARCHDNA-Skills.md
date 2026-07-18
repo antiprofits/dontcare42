@@ -7,6 +7,30 @@ See `ProjectSkills/dependency-map.md` for the full pipeline graph.
 
 ## Active Skills
 
+### task-observer
+
+| Field | Value |
+|-------|-------|
+| **Source** | `rebelytics/one-skill-to-rule-them-all` |
+| **Status** | `active` |
+| **Scope** | global (all projects) |
+| **Install path** | `.claude/skills/task-observer/SKILL.md` + `references/` |
+| **Lock hash** | `60bfdcd9` |
+| **Version** | v2.0.0 |
+| **Added** | 2026-07-18 |
+
+**Purpose:** Meta-skill that silently monitors work sessions, logs skill improvement
+observations to `skill-observations/log.md`, and produces end-of-session summaries
+grouped by affected skill. Feeds directly into `ProjectSkills/changelog.md` and
+`ProjectSkills/skill-arsenal.md` update workflows.
+
+**Pipeline position:** Cross-cutting — active across all pipeline steps.
+
+**Note:** Retains `references/` folder (`environments.md`, `skill-authoring.md`,
+`weekly-review.md`) — these are text files loaded on demand by the skill, not binary assets.
+
+---
+
 ### llm-application-dev
 
 | Field | Value |
