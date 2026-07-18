@@ -26,6 +26,66 @@ grouped by affected skill. Feeds directly into `ProjectSkills/changelog.md` and
 
 **Pipeline position:** Cross-cutting — active across all pipeline steps.
 
+---
+
+### omni-compression
+
+| Field | Value |
+|-------|-------|
+| **Source** | `diegosouzapw/OmniRoute` |
+| **Status** | `active` |
+| **Scope** | global (primary use: SEARCHDNA LLM probe calls) |
+| **Install path** | `.claude/skills/omni-compression/SKILL.md` |
+| **Lock hash** | `4f76b5aa` |
+| **Added** | 2026-07-18 |
+
+**Purpose:** Configures RTK (terminal/structured output, 60–90% savings) and Caveman (prose, ~46% savings) compression for LLM requests. Directly reduces cost and latency for SEARCHDNA probe classification calls.
+
+---
+
+### omni-context-rtk
+
+| Field | Value |
+|-------|-------|
+| **Source** | `diegosouzapw/OmniRoute` |
+| **Status** | `active` |
+| **Scope** | global |
+| **Install path** | `.claude/skills/omni-context-rtk/SKILL.md` |
+| **Lock hash** | `b73f3756` |
+| **Added** | 2026-07-18 |
+
+**Purpose:** RTK filter and context relay configuration — compresses large context windows before LLM calls. Useful for probe sessions with long accumulated context.
+
+---
+
+### omni-resilience
+
+| Field | Value |
+|-------|-------|
+| **Source** | `diegosouzapw/OmniRoute` |
+| **Status** | `active` |
+| **Scope** | global (patterns applicable to ProbeAdapter) |
+| **Install path** | `.claude/skills/omni-resilience/SKILL.md` |
+| **Lock hash** | `a83680aa` |
+| **Added** | 2026-07-18 |
+
+**Purpose:** Circuit breaker, cooldown, and lockout patterns. Reference implementation for `ProbeAdapter` error handling as defined in `AGENTS.md` → Error-Handling Conventions.
+
+---
+
+### omni-inference
+
+| Field | Value |
+|-------|-------|
+| **Source** | `diegosouzapw/OmniRoute` |
+| **Status** | `active` |
+| **Scope** | global |
+| **Install path** | `.claude/skills/omni-inference/SKILL.md` |
+| **Lock hash** | `e2d73cb2` |
+| **Added** | 2026-07-18 |
+
+**Purpose:** Unified LLM inference surface — chat completions, embeddings, tool use, fallback chains. Reference for the SEARCHDNA LLM probe architecture and `llm-application-dev` integration.
+
 **Note:** Retains `references/` folder (`environments.md`, `skill-authoring.md`,
 `weekly-review.md`) — these are text files loaded on demand by the skill, not binary assets.
 

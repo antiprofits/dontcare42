@@ -15,6 +15,18 @@ Update this file every time a skill is installed, parked, or removed.
 
 > Note: `task-observer` keeps its `references/` folder (3 `.md` files) — these are text files the skill loads on demand, not binary assets.
 
+### LLM Routing & Token Efficiency (OmniRoute)
+
+| Skill | Source | Hash prefix | Scope | Added |
+|-------|--------|-------------|-------|-------|
+| `omni-compression` | `diegosouzapw/OmniRoute` | `4f76b5aa` | global | 2026-07-18 |
+| `omni-context-rtk` | `diegosouzapw/OmniRoute` | `b73f3756` | global | 2026-07-18 |
+| `omni-resilience` | `diegosouzapw/OmniRoute` | `a83680aa` | global | 2026-07-18 |
+| `omni-inference` | `diegosouzapw/OmniRoute` | `e2d73cb2` | global | 2026-07-18 |
+
+> OmniRoute itself (self-hosted provider gateway, 264+ LLMs, ~1.6B free tokens/month) is noted
+> as a future integration for SEARCHDNA probe LLM calls — see `AGENTS.md` → Provider Boundaries.
+
 ### LLM & AI Development
 
 | Skill | Source | Hash prefix | Scope | Added |
@@ -87,8 +99,8 @@ Skills that were active and have been removed.
 
 | Category | Count |
 |----------|-------|
-| Active (in repo) | 27 |
+| Active (in repo) | 31 |
 | Active (user-level) | 1 |
 | Parked | 1 |
 | Deprecated | 0 |
-| **Total tracked** | **29** |
+| **Total tracked** | **33** |

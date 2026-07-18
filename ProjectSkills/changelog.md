@@ -7,6 +7,10 @@ Chronological record of skill additions, removals, and status changes.
 ## 2026-07-18
 
 ### Added
+- `omni-compression` (diegosouzapw/OmniRoute) — RTK + Caveman token compression for LLM probe calls
+- `omni-context-rtk` (diegosouzapw/OmniRoute) — context window compression via RTK filters
+- `omni-resilience` (diegosouzapw/OmniRoute) — circuit breaker/cooldown patterns for ProbeAdapter error handling
+- `omni-inference` (diegosouzapw/OmniRoute) — unified LLM inference routing reference
 - `task-observer` v2.0.0 (rebelytics/one-skill-to-rule-them-all) — meta-skill that monitors
   sessions and logs skill improvement observations; feeds into ProjectSkills governance layer.
   Installed manually (curl) with `references/` folder retained (on-demand text files, not assets).

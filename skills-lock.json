@@ -162,6 +162,30 @@
       "sourceType": "github",
       "skillPath": ".claude/skills/task-observer/SKILL.md",
       "computedHash": "60bfdcd99c4678a81e8adbd3a790c2a4b56cef95f25f90d3f091001380648fee"
+    },
+    "omni-compression": {
+      "source": "diegosouzapw/OmniRoute",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/omni-compression/SKILL.md",
+      "computedHash": "4f76b5aae58d2b5aae144c3c9f6b1ca5aeaa372978ca0906e27717ec21da4c35"
+    },
+    "omni-context-rtk": {
+      "source": "diegosouzapw/OmniRoute",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/omni-context-rtk/SKILL.md",
+      "computedHash": "b73f37561da5fa089d1fd1e16373927bd3f9cb6edd36001f8de4d23908dafb56"
+    },
+    "omni-resilience": {
+      "source": "diegosouzapw/OmniRoute",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/omni-resilience/SKILL.md",
+      "computedHash": "a83680aa166fb462d030e06e6a802ed77fd2f6023ee9644854df7816f192cbcf"
+    },
+    "omni-inference": {
+      "source": "diegosouzapw/OmniRoute",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/omni-inference/SKILL.md",
+      "computedHash": "e2d73cb207ce6bf6a17580d057747926e5c4d9e9ead6f4996f5e5af3ca54550a"
     }
   }
 }
