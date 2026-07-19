@@ -39,7 +39,7 @@ grouped by affected skill. Feeds directly into `ProjectSkills/changelog.md` and
 | **Lock hash** | `4f76b5aa` |
 | **Added** | 2026-07-18 |
 
-**Purpose:** Configures RTK (terminal/structured output, 60–90% savings) and Caveman (prose, ~46% savings) compression for LLM requests. Directly reduces cost and latency for SEARCHDNA probe classification calls.
+**Purpose:** Reference documentation for RTK (terminal/structured output, 60–90% savings) and Caveman (prose, ~46% savings) compression modes. Does not activate compression by itself — requires a running OmniRoute deployment configured as the client base-URL. See `AGENTS.md` → OmniRoute Integration Status before enabling.
 
 ---
 
@@ -54,7 +54,7 @@ grouped by affected skill. Feeds directly into `ProjectSkills/changelog.md` and
 | **Lock hash** | `b73f3756` |
 | **Added** | 2026-07-18 |
 
-**Purpose:** RTK filter and context relay configuration — compresses large context windows before LLM calls. Useful for probe sessions with long accumulated context.
+**Purpose:** Reference documentation for RTK filter and context relay configuration. Does not compress context by itself — requires OmniRoute running as the client proxy. Evaluate per `AGENTS.md` → OmniRoute Integration Status before use.
 
 ---
 
@@ -84,7 +84,7 @@ grouped by affected skill. Feeds directly into `ProjectSkills/changelog.md` and
 | **Lock hash** | `e2d73cb2` |
 | **Added** | 2026-07-18 |
 
-**Purpose:** Unified LLM inference surface — chat completions, embeddings, tool use, fallback chains. Reference for the SEARCHDNA LLM probe architecture and `llm-application-dev` integration.
+**Purpose:** Reference documentation for OmniRoute's unified inference surface — chat completions, embeddings, tool use, fallback chains. Useful as an architecture reference for the SEARCHDNA probe LLM layer, but routing is not active until OmniRoute is validated per `AGENTS.md` → OmniRoute Integration Status.
 
 **Note:** Retains `references/` folder (`environments.md`, `skill-authoring.md`,
 `weekly-review.md`) — these are text files loaded on demand by the skill, not binary assets.

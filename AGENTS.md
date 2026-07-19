@@ -193,6 +193,36 @@ Adapters are stateless. Credentials are injected via `secureStore`. Never hardco
 
 Never call a provider not listed here without updating this table first.
 
+### OmniRoute Integration Status
+
+**Status: Evaluating — not part of the required development path.**
+
+OmniRoute may provide provider routing, resilience, usage telemetry, and prompt compression
+when an agent client is explicitly configured to send requests through a persistent OmniRoute
+deployment. The installed OmniRoute Agent Skills (`omni-compression`, `omni-context-rtk`,
+`omni-resilience`, `omni-inference`) are **reference documentation only**. They do not
+activate routing or compression by themselves.
+
+Do not assume OmniRoute is available from environment variables alone. Client base-URL,
+authentication, streaming, tool-call, and provider compatibility must be validated for the
+exact execution environment.
+
+Before enabling OmniRoute for any production development session:
+
+1. Deploy to a persistent private endpoint and test in an isolated session.
+2. Confirm tool-call and streaming compatibility against an unproxied baseline.
+3. Measure actual token savings — run the same tool-heavy task both ways and compare
+   input tokens, output quality, missing diagnostic details, and latency.
+4. Verify that compression preserves errors, diffs, test failures, and other actionable output.
+5. Deliberately trigger a provider failure and confirm fallback does not break tool calls or streaming.
+6. Review credential storage, logging, retention, and exposure of repository content that
+   passes through the hosted gateway.
+7. Confirm the exact routing, compression, and cost headers (`X-OmniRoute-*`).
+8. Record the approved endpoint and client-specific configuration separately from this file.
+
+Until all eight steps are validated and recorded, agents must not treat OmniRoute as a
+required dependency or claim that its Agent Skills provide active compression.
+
 ---
 
 ## Validation Commands
