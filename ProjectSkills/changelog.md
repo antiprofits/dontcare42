@@ -4,6 +4,18 @@ Chronological record of skill additions, removals, and status changes.
 
 ---
 
+## 2026-07-19
+
+### Governance
+
+- Documented `uni-code` MCP server (`@yuxianglin/uni-code@0.3.1`) in `AGENTS.md` → Local MCP Servers
+  and `ProjectSkills/skill-arsenal.md` → Registered MCP Servers. Pinned registration to reviewed
+  version 0.3.1. Includes project-scoping rules, auto-invoke policy, and prompt-injection/staleness
+  guard. Server is read-only at the MCP tool level; updates its derived SQLite index at
+  `~/.uni-code/store.db` on each call.
+
+---
+
 ## 2026-07-18
 
 ### Added

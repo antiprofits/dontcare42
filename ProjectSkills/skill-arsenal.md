@@ -85,6 +85,18 @@ Identified as useful; not installed. Install when the trigger condition is met.
 
 ---
 
+## Registered MCP Servers
+
+MCP servers registered for this project. Governed by `AGENTS.md` → Local MCP Servers.
+These are not skills and are not committed to the repository; they are registered in the
+Claude Code project config.
+
+| Server | Package | Version | Registration scope | Added |
+|--------|---------|---------|-------------------|-------|
+| `uni-code` | `@yuxianglin/uni-code` | 0.3.1 (pinned) | project (`/home/user/dontcare42`) | 2026-07-19 |
+
+---
+
 ## Deprecated Skills
 
 Skills that were active and have been removed.
@@ -103,4 +115,5 @@ Skills that were active and have been removed.
 | Active (user-level) | 1 |
 | Parked | 1 |
 | Deprecated | 0 |
-| **Total tracked** | **33** |
+| MCP servers (registered) | 1 |
+| **Total tracked** | **34** |
