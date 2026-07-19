@@ -13,7 +13,7 @@ See `ProjectSkills/dependency-map.md` for the full pipeline graph.
 |-------|-------|
 | **Source** | `rebelytics/one-skill-to-rule-them-all` |
 | **Status** | `active` |
-| **Scope** | global (all projects) |
+| **Scope** | repository-scoped (all projects in this repo) |
 | **Install path** | `.claude/skills/task-observer/SKILL.md` + `references/` |
 | **Lock hash** | `60bfdcd9` |
 | **Version** | v2.0.0 |
@@ -24,6 +24,9 @@ observations to `skill-observations/log.md`, and produces end-of-session summari
 grouped by affected skill. Feeds directly into `ProjectSkills/changelog.md` and
 `ProjectSkills/skill-arsenal.md` update workflows.
 
+**Note:** Retains `references/` folder (`environments.md`, `skill-authoring.md`,
+`weekly-review.md`) — these are text files loaded on demand by the skill, not binary assets.
+
 **Pipeline position:** Cross-cutting — active across all pipeline steps.
 
 ---
@@ -33,8 +36,8 @@ grouped by affected skill. Feeds directly into `ProjectSkills/changelog.md` and
 | Field | Value |
 |-------|-------|
 | **Source** | `diegosouzapw/OmniRoute` |
-| **Status** | `active` |
-| **Scope** | global (primary use: SEARCHDNA LLM probe calls) |
+| **Status** | `reference-only` |
+| **Scope** | repository-scoped (primary use: SEARCHDNA LLM probe calls) |
 | **Install path** | `.claude/skills/omni-compression/SKILL.md` |
 | **Lock hash** | `4f76b5aa` |
 | **Added** | 2026-07-18 |
@@ -48,8 +51,8 @@ grouped by affected skill. Feeds directly into `ProjectSkills/changelog.md` and
 | Field | Value |
 |-------|-------|
 | **Source** | `diegosouzapw/OmniRoute` |
-| **Status** | `active` |
-| **Scope** | global |
+| **Status** | `reference-only` |
+| **Scope** | repository-scoped |
 | **Install path** | `.claude/skills/omni-context-rtk/SKILL.md` |
 | **Lock hash** | `b73f3756` |
 | **Added** | 2026-07-18 |
@@ -63,8 +66,8 @@ grouped by affected skill. Feeds directly into `ProjectSkills/changelog.md` and
 | Field | Value |
 |-------|-------|
 | **Source** | `diegosouzapw/OmniRoute` |
-| **Status** | `active` |
-| **Scope** | global (patterns applicable to ProbeAdapter) |
+| **Status** | `reference-only` |
+| **Scope** | repository-scoped (patterns applicable to ProbeAdapter) |
 | **Install path** | `.claude/skills/omni-resilience/SKILL.md` |
 | **Lock hash** | `a83680aa` |
 | **Added** | 2026-07-18 |
@@ -78,16 +81,13 @@ grouped by affected skill. Feeds directly into `ProjectSkills/changelog.md` and
 | Field | Value |
 |-------|-------|
 | **Source** | `diegosouzapw/OmniRoute` |
-| **Status** | `active` |
-| **Scope** | global |
+| **Status** | `reference-only` |
+| **Scope** | repository-scoped |
 | **Install path** | `.claude/skills/omni-inference/SKILL.md` |
 | **Lock hash** | `e2d73cb2` |
 | **Added** | 2026-07-18 |
 
 **Purpose:** Reference documentation for OmniRoute's unified inference surface — chat completions, embeddings, tool use, fallback chains. Useful as an architecture reference for the SEARCHDNA probe LLM layer, but routing is not active until OmniRoute is validated per `AGENTS.md` → OmniRoute Integration Status.
-
-**Note:** Retains `references/` folder (`environments.md`, `skill-authoring.md`,
-`weekly-review.md`) — these are text files loaded on demand by the skill, not binary assets.
 
 ---
 
@@ -97,7 +97,7 @@ grouped by affected skill. Feeds directly into `ProjectSkills/changelog.md` and
 |-------|-------|
 | **Source** | `moizibnyousaf/ai-agent-skills` |
 | **Status** | `active` |
-| **Scope** | global (primary use: SEARCHDNA) |
+| **Scope** | repository-scoped (primary use: SEARCHDNA) |
 | **Install path** | `.claude/skills/llm-application-dev/SKILL.md` |
 | **Lock hash** | `40d1e099` |
 | **Added** | 2026-06-27 |

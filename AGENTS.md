@@ -22,7 +22,29 @@ Each project lives under `ProjectSkills/projects/<name>/` for skill and dependen
 
 ---
 
-## Architecture Overview
+## Current Repository State
+
+At the time of the initial commit, this repository contains governance documents and
+Claude skill files only. **No application source code exists yet.**
+
+**What currently exists:**
+- Governance: `AGENTS.md`, `CLAUDE.md`, `PROJECT.md`, `skills-lock.json`
+- Claude skills: `.claude/skills/**/SKILL.md` (31 skills), `.claude/skills/task-observer/references/` (3 files)
+- Planning docs: `ProjectSkills/` (registry, dependency map, project skill files)
+
+**What does not yet exist (planned — see Build Order below):**
+- `lib/` directory and all source files under it
+- `lib/searchdna/types.ts`, `cluster.ts`, `probes/trends.ts`, `probes/youtube.ts`
+- Any TypeScript application code, probe adapters, clustering engine, or UI components
+- `ProbeAdapter` interface, `secureStore` API, `DemandCluster`, `ProbeError`, `<DemandErrorBoundary>`
+- Test fixtures, validation Taskfile, `lib/searchdna/__fixtures__/`
+
+All sections below describe the **intended** architecture and standards for code that
+has not yet been written. Sections referencing `lib/searchdna/` describe planned files.
+
+---
+
+## Architecture Overview (Target — Planned)
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -47,6 +69,10 @@ See `ProjectSkills/projects/SEARCHDNA/SEARCHDNA-Skills.md` for the LLM pipeline.
 ---
 
 ## Directory Map
+
+> **Note:** The `lib/` directory and everything under it **does not yet exist**. The map
+> below shows the current repository layout plus the planned target layout. Files marked
+> `(planned)` have not been created; they will be added during the Build Order phases.
 
 ```
 /
@@ -76,13 +102,13 @@ See `ProjectSkills/projects/SEARCHDNA/SEARCHDNA-Skills.md` for the LLM pipeline.
 │       └── Vantage/
 │           └── Vantage-Skills.md
 │
-└── lib/
+└── lib/                               # (planned — does not exist yet)
     └── searchdna/                     # SEARCHDNA source (Phase 1+ work)
-        ├── types.ts
-        ├── cluster.ts
+        ├── types.ts                   # (planned — Phase 1, step 1)
+        ├── cluster.ts                 # (planned — Phase 2, step 5)
         └── probes/
-            ├── trends.ts
-            └── youtube.ts
+            ├── trends.ts              # (planned — Phase 1, step 2)
+            └── youtube.ts             # (planned — Phase 1, step 3)
 ```
 
 ---
@@ -91,7 +117,7 @@ See `ProjectSkills/projects/SEARCHDNA/SEARCHDNA-Skills.md` for the LLM pipeline.
 
 | File | What it governs |
 |------|----------------|
-| `lib/searchdna/types.ts` | Canonical `DemandSignal` schema — never duplicated elsewhere |
+| `lib/searchdna/types.ts` | Canonical `DemandSignal` schema — never duplicated elsewhere **(planned — does not yet exist)** |
 | `skills-lock.json` | Installed skills, sources, and hashes — do not edit by hand |
 | `ProjectSkills/skill-arsenal.md` | Global skill registry — update whenever a skill is added or removed |
 | `PROJECT.md` | Product spec, data schema, roadmap, and build order |
@@ -170,7 +196,11 @@ Input (typed Pydantic / Zod schema)
 
 ## Adapter Architecture
 
-Each data source is an adapter implementing the `ProbeAdapter` interface (defined in `types.ts`):
+> **Planned — not yet implemented.** `ProbeAdapter`, `secureStore`, `DemandSignal`,
+> `DemandCluster`, `ProbeError`, and `<DemandErrorBoundary>` do not exist yet.
+> This section defines the design contract for Phase 1+ implementation.
+
+Each data source is an adapter implementing the `ProbeAdapter` interface (to be defined in `types.ts`):
 
 ```typescript
 interface ProbeAdapter {
@@ -282,6 +312,9 @@ Until a Taskfile exists, use equivalent `npx` or `pnpm` commands.
 
 ## Testing Philosophy
 
+> **Planned — applies once Phase 1 source files are created.**
+> `lib/searchdna/__fixtures__/` and test files do not yet exist.
+
 - Unit-test every probe adapter with a mocked HTTP response.
 - Unit-test the clustering engine with synthetic `DemandSignal[]` fixtures.
 - Do not test framework internals — only the behaviour this codebase owns.
@@ -310,6 +343,9 @@ Until a Taskfile exists, use equivalent `npx` or `pnpm` commands.
 ---
 
 ## Error-Handling Conventions
+
+> **Planned — applies once Phase 1+ source files are created.**
+> `ProbeError` and `<DemandErrorBoundary>` do not yet exist.
 
 - Probes catch and wrap provider errors into a typed `ProbeError` with `source`, `query`, and `cause`.
 - The clustering engine never throws — it returns `{ clusters, errors }` so partial results are usable.
