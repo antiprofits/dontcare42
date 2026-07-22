@@ -113,6 +113,15 @@ Identified as useful; not installed. Install when the trigger condition is met.
 | Skill | Source | Trigger condition | Identified |
 |-------|--------|------------------|-----------|
 | `tailwind-design-system` | `wshobson/agents` | `SearchDnaPage.tsx` UI work begins (Phase 3) | 2026-06-27 |
+| `design-system-patterns` | `wshobson/agents` | `SearchDnaPage.tsx` UI work begins (Phase 3) | 2026-07-22 |
+| `accessibility-compliance` | `wshobson/agents` | `SearchDnaPage.tsx` UI work begins (Phase 3) | 2026-07-22 |
+| `responsive-design` | `wshobson/agents` | `SearchDnaPage.tsx` UI work begins (Phase 3) | 2026-07-22 |
+| `interaction-design` | `wshobson/agents` | `SearchDnaPage.tsx` UI work begins (Phase 3) | 2026-07-22 |
+| `visual-design-foundations` | `wshobson/agents` | `SearchDnaPage.tsx` UI work begins (Phase 3) | 2026-07-22 |
+| `web-component-design` | `wshobson/agents` | `SearchDnaPage.tsx` UI work begins (Phase 3) | 2026-07-22 |
+| `mobile-ios-design` | `wshobson/agents` | `SearchDnaPage.tsx` UI work begins (Phase 3) | 2026-07-22 |
+| `mobile-android-design` | `wshobson/agents` | `SearchDnaPage.tsx` UI work begins (Phase 3) | 2026-07-22 |
+| `react-native-design` | `wshobson/agents` | `SearchDnaPage.tsx` UI work begins (Phase 3) | 2026-07-22 |
 
 ---
 
@@ -136,6 +145,7 @@ Claude Code project config.
 | `heygen-com/hyperframes` | Not documented in SKILL.md | Unverified — check upstream repo before redistribution | Applies to all 25 hyperframes suite skills |
 | `diegosouzapw/OmniRoute` | Not documented in SKILL.md | Unverified | Applies to omni-compression, omni-context-rtk, omni-resilience, omni-inference |
 | `moizibnyousaf/ai-agent-skills` | Not documented in SKILL.md | Unverified | SKILL.md frontmatter incorrectly states `wshobson/agents`; lockfile and this registry are authoritative |
+| `wshobson/agents` | MIT | Confirmed in repo LICENSE | Source for parked `tailwind-design-system` + `ui-design` suite; `llm-application-dev` SKILL.md frontmatter claims this source but lockfile is authoritative (`moizibnyousaf/ai-agent-skills`) |
 | `vercel-labs/skills` | Not documented in SKILL.md | Unverified | find-skills (user-level only, not committed) |
 
 ---
@@ -156,7 +166,7 @@ Skills that were active and have been removed.
 |----------|-------|
 | Active (in repo) | 31 |
 | Active (user-level) | 1 |
-| Parked | 1 |
+| Parked | 10 |
 | Deprecated | 0 |
 | MCP servers (registered) | 1 |
-| **Total tracked** | **34** |
+| **Total tracked** | **43** |
