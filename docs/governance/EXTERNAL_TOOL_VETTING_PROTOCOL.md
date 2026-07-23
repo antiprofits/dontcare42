@@ -306,7 +306,55 @@ For integration effort and long-term burden, a higher score means more effort or
 
 Do not average the numbers blindly. Explain the tradeoff.
 
-#### 9. Recommended Adoption Scope
+#### 9. Cross-Project and External Value
+
+First, identify the target project this candidate is being evaluated for.
+
+Then assess whether it would also provide meaningful value beyond the target project. Only name projects or contexts where a real, specific benefit exists. Do not force connections to unrelated work.
+
+**Contexts to check:**
+
+* Any other existing projects in the system
+* Future personal projects
+* External, client, or commercial projects
+
+**For each applicable context, provide:**
+
+* Project name or context
+* Value score (0–10)
+* What it would specifically help with
+* Why it is or is not useful in that context
+* Whether it overlaps with something already present in that context
+* Any changes required before it can be used safely or effectively there
+
+**External and client value:**
+
+Rate external/client value from 0–10 and explain whether the candidate would improve one or more of:
+
+* Delivery speed
+* Output quality
+* Security posture
+* Automation coverage
+* Scalability
+* Profitability
+* Product capability
+
+**Reuse classification:**
+
+State which of the following applies:
+
+* Useful only for the target project
+* Reusable across multiple personal projects
+* Useful for external or client work
+* Useful for both personal and external work
+* Better used only as a reference
+* Not valuable enough to adopt in any context
+
+Include cross-project and external value scores in the cost-benefit scorecard and incorporate the reuse classification in the final recommendation.
+
+Cross-project or external usefulness must not override security, licensing, maintenance, architectural fit, duplication, or unnecessary-complexity concerns identified elsewhere in this report.
+
+#### 10. Recommended Adoption Scope
 
 Choose the smallest responsible scope:
 
@@ -319,7 +367,7 @@ Choose the smallest responsible scope:
 
 State exactly what should be included and excluded.
 
-#### 10. Implementation Recommendation
+#### 11. Implementation Recommendation
 
 Provide a phased implementation plan only if adoption is justified.
 
@@ -336,7 +384,7 @@ The plan must include:
 
 Do not implement anything during the vetting stage.
 
-#### 11. Final Recommendation
+#### 12. Final Recommendation
 
 End with this exact structure:
 
@@ -351,6 +399,9 @@ Cut:
 
 Why:
 [The strongest reason for the recommendation]
+
+Reuse:
+[Useful only for target project / Reusable across personal projects / Useful for external or client work / Useful for both / Reference only / Not valuable enough to adopt]
 
 Next action:
 [The single highest-leverage next step]
