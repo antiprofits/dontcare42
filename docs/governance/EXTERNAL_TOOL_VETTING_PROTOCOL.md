@@ -308,38 +308,54 @@ Do not average the numbers blindly. Explain the tradeoff.
 
 #### 9. Cross-Project and External Value
 
-First, identify the target project this candidate is being evaluated for.
+**Step 1 — Identify the target project.**
 
-Then assess whether it would also provide meaningful value beyond the target project. Only name projects or contexts where a real, specific benefit exists. Do not force connections to unrelated work.
+State the project this candidate is being evaluated for, including its current phase and scope.
 
-**Contexts to check:**
+**Step 2 — Source all project context before evaluating.**
 
-* Any other existing projects in the system
-* Future personal projects
-* External, client, or commercial projects
+Before assessing other projects, consult all available sources:
 
-**For each applicable context, provide:**
+* `AGENTS.md` — architecture, scope boundaries, build order
+* `PROJECT.md` — product spec, data schema, roadmap
+* Project skill files (`ProjectSkills/projects/*/`)
+* Prior session context and decisions
+* Any committed documentation in the repository
 
-* Project name or context
+Do not mark a project as "purpose unknown" if its purpose is documented in any of the above. State which sources were checked and what was found. Only use "purpose undocumented" if all sources were consulted and none contained a description.
+
+**Step 3 — Evaluate each known project.**
+
+For every project in the system, determine whether it is relevant or excluded. If excluded, state the reason in one sentence. If relevant, evaluate all three value dimensions:
+
+* **Integration value** — should the candidate become a permanent part of the project's stack, skills, or dependencies?
+* **Operational value** — does it help build, run, maintain, test, secure, or monitor the project without being integrated into the product itself?
+* **Audit value** — is it useful for reviewing, assessing, or evaluating the project from the outside, without being integrated or operated within it?
+
+For each applicable dimension, provide:
+
 * Value score (0–10)
-* What it would specifically help with
-* Why it is or is not useful in that context
-* Whether it overlaps with something already present in that context
-* Any changes required before it can be used safely or effectively there
+* What specifically it helps with
+* Whether anything already in the system covers this
+* Any conditions or changes required before it can be used
 
-**External and client value:**
+**Step 4 — Evaluate use beyond direct project integration.**
 
-Rate external/client value from 0–10 and explain whether the candidate would improve one or more of:
+Assess the following contexts separately from project integration. Only include contexts where a concrete use case exists:
 
-* Delivery speed
-* Output quality
-* Security posture
-* Automation coverage
-* Scalability
-* Profitability
-* Product capability
+* **Personal authorized work** — security research, bug bounties, CTFs, personal tooling, exploration
+* **Client or commercial services** — paid engagements, agency work, consulting, product delivery to external parties
+* **Reusable internal infrastructure** — shared tooling, scaffolding, or skills applicable across multiple projects without modification
+* **External auditing or assessment** — reviewing third-party systems, codebases, or security postures on behalf of clients or for independent assessment
 
-**Reuse classification:**
+For each applicable context:
+
+* State the concrete use case
+* Rate value (0–10)
+* Explain what delivery speed, quality, security, automation, scalability, profitability, or product capability it improves
+* Flag any constraints or authorization requirements
+
+**Step 5 — Reuse classification.**
 
 State which of the following applies:
 
@@ -350,7 +366,9 @@ State which of the following applies:
 * Better used only as a reference
 * Not valuable enough to adopt in any context
 
-Include cross-project and external value scores in the cost-benefit scorecard and incorporate the reuse classification in the final recommendation.
+**Scorecard and final recommendation:**
+
+Include per-project value scores and the reuse classification in Section 8's cost-benefit scorecard. Incorporate the reuse classification in the Section 12 Final Recommendation `Reuse:` field.
 
 Cross-project or external usefulness must not override security, licensing, maintenance, architectural fit, duplication, or unnecessary-complexity concerns identified elsewhere in this report.
 
