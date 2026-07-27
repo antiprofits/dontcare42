@@ -9,6 +9,7 @@ This file contains only what is unique to Claude.
 ## Planning Work
 
 1. Read `AGENTS.md`, `PROJECT.md`, and the relevant `ProjectSkills/projects/*/` file before writing any code.
+   Read `LESSONS.md` before starting work.
 2. Confirm the task is within the current phase scope boundary defined in `AGENTS.md`.
 3. If the task spans more than one file, state the change sequence before starting.
 4. Do not design for hypothetical future requirements. Implement exactly what the task asks.
