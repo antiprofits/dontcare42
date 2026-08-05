@@ -98,11 +98,29 @@ references) and are classified `Complete`.
 
 ## Active Skills — User Level (`~/.claude/skills/`)
 
-These are installed globally at the user level, not committed to this repo.
+These are installed at the user level and are **not committed to this repo**.
 
-| Skill | Source | Scope | Added |
-|-------|--------|-------|-------|
-| `find-skills` | `vercel-labs/skills` | user-global | 2026-06-27 |
+> **Ephemeral container note:** Skills installed to `~/.claude/skills/` in a remote container
+> session are lost when the container is reclaimed. They must be re-installed on the local
+> machine to persist. SHAs below are the install-time commit SHAs where recorded.
+> User-level skills are not tracked in `skills-lock.json` (which covers repo-committed skills only).
+
+| Skill | Source | Pinned SHA | License | Files | Local Mods | Added |
+|-------|--------|------------|---------|-------|------------|-------|
+| `find-skills` | `vercel-labs/skills` | unrecorded | Unverified | SKILL.md | none | 2026-06-27 |
+| `aar-loop` | `coopersimson96/aar-loop` | `a7172d610760ba403af4cf3cb18dc0d895431b2e` | Unverified | SKILL.md, scripts/append_lesson.py | none | 2026-07-22 |
+| `beautify-github-readme` | `oil-oil/beautify-github-readme` | `fa477898d7f62b3c4cf19224a6a4eb7ce4b4defc` | Unverified | SKILL.md, references/ ×7 | scripts/audit_readme.py excluded (read-only audit only; SKILL.md does not depend on it at runtime) | 2026-07-22 |
+| `improve-animations` | `emilkowalski/skills` | unrecorded | Unverified | SKILL.md only | companion files excluded per SKILL.md-only trimming rule | 2026-07-22 |
+| `mind-the-gap` | `emilkowalski/skills` | unrecorded | Unverified | SKILL.md only | companion files excluded per SKILL.md-only trimming rule | 2026-07-22 |
+| `scroll-animations` | `emilkowalski/skills` | unrecorded | Unverified | SKILL.md only | companion files excluded per SKILL.md-only trimming rule | 2026-07-22 |
+
+> **Excluded from install (emilkowalski/skills):** `animation-vocabulary` — excluded entirely;
+> no governance entry created. Do not install.
+>
+> **Gap — wshobson/agents TypeScript skills:** Four TypeScript skills from `wshobson/agents`
+> were approved for user-level install in a prior session. Their exact skill names were not
+> captured in the governance record. Verify from local machine `~/.claude/skills/` and add
+> entries here before Phase 1 (local machine reinstall) begins.
 
 ---
 
@@ -141,12 +159,15 @@ Claude Code project config.
 
 | Source | License | Verification status | Notes |
 |--------|---------|---------------------|-------|
-| `rebelytics/one-skill-to-rule-them-all` | CC BY 4.0 | Confirmed in upstream README | — |
-| `heygen-com/hyperframes` | Not documented in SKILL.md | Unverified — check upstream repo before redistribution | Applies to all 25 hyperframes suite skills |
-| `diegosouzapw/OmniRoute` | Not documented in SKILL.md | Unverified | Applies to omni-compression, omni-context-rtk, omni-resilience, omni-inference |
-| `moizibnyousaf/ai-agent-skills` | Not documented in SKILL.md | Unverified | SKILL.md frontmatter incorrectly states `wshobson/agents`; lockfile and this registry are authoritative |
+| `rebelytics/one-skill-to-rule-them-all` | CC-BY-4.0 | Confirmed in upstream README | task-observer |
+| `heygen-com/hyperframes` | Apache-2.0 | Confirmed in upstream repo LICENSE file and badge | Applies to all 25 hyperframes suite skills |
+| `diegosouzapw/OmniRoute` | MIT | Confirmed in upstream repo README ("100% MIT self-hosted") | omni-compression, omni-context-rtk, omni-resilience, omni-inference |
+| `moizibnyousaf/ai-agent-skills` | MIT | Confirmed in upstream repo LICENSE file | llm-application-dev; SKILL.md frontmatter incorrectly states `wshobson/agents`; lockfile and this registry are authoritative |
 | `wshobson/agents` | MIT | Confirmed in repo LICENSE | Source for parked `tailwind-design-system` + `ui-design` suite; `llm-application-dev` SKILL.md frontmatter claims this source but lockfile is authoritative (`moizibnyousaf/ai-agent-skills`) |
-| `vercel-labs/skills` | Not documented in SKILL.md | Unverified | find-skills (user-level only, not committed) |
+| `coopersimson96/aar-loop` | Unverified | Not checked | aar-loop (user-level); verify license before redistribution |
+| `oil-oil/beautify-github-readme` | Unverified | Not checked | beautify-github-readme (user-level); verify license before redistribution |
+| `emilkowalski/skills` | Unverified | Not checked | improve-animations, mind-the-gap, scroll-animations (user-level); verify license before redistribution |
+| `vercel-labs/skills` | Unverified | Not checked | find-skills (user-level only, not committed) |
 
 ---
 
@@ -162,11 +183,13 @@ Skills that were active and have been removed.
 
 ## Skill Counts
 
-| Category | Count |
-|----------|-------|
-| Active (in repo) | 31 |
-| Active (user-level) | 1 |
-| Parked | 10 |
-| Deprecated | 0 |
-| MCP servers (registered) | 1 |
-| **Total tracked** | **43** |
+| Category | Count | Notes |
+|----------|-------|-------|
+| Active (in repo) | 31 | See `.claude/skills/` |
+| Active (user-level) | 6 | find-skills, aar-loop, beautify-github-readme, improve-animations, mind-the-gap, scroll-animations |
+| Active (user-level, gap) | ? | wshobson TypeScript skills — approved but names unrecorded; verify from local machine |
+| Parked | 10 | wshobson/agents ui-design suite |
+| Deprecated | 0 | — |
+| Excluded | 1 | animation-vocabulary (emilkowalski/skills) — do not install |
+| MCP servers (registered) | 1 | uni-code @0.3.1 |
+| **Total tracked (confirmed)** | **48+** | Excludes unrecorded wshobson TypeScript skills |
